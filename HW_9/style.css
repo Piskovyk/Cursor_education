@@ -251,6 +251,7 @@ section {
     height: 592px;
     float: left;
     position: relative;
+    background: linear-gradient(270deg, #FFFFFF 5.16%, rgba(255, 255, 255, 0) 67.14%), rgba(255, 255, 255, 0.5) url(./img/bg_b2.png) no-repeat;
 }
 
 .left_bg {
@@ -348,6 +349,7 @@ section {
 
     .blockTwo_left {
         grid-area: blockTwo_left;
+        background: none;
     }
 
 
