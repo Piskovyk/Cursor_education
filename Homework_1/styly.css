@@ -1,0 +1,202 @@
+/*Обнулення*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/*--------------------*/
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+@media(max-width:721px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+body {
+    font-family: Arial, "Helvetica Neue" Helvetica, sans-serif;
+    background: rgba(24, 23, 23, 0.94);
+}
+
+h1 {
+    color: yellow;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+@media(max-width:721px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+
+.button:hover {
+    text-shadow: 3px 6px 4px gold;
+}
+
+.button {
+    margin: 0 auto;
+    width: 220px;
+}
+
+h3 {
+    color: yellow;
+    font-size: 20px;
+    padding: 0 0 0 100px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+@media(max-width:721px) {
+    h3 {
+        font-size: 18px;
+        text-align: left;
+    }
+}
+
+p {
+    color: white;
+    font-size: 15px;
+    font-style: inherit;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+@media(max-width:721px) {
+    p {
+        margin: 4px;
+    }
+}
+
+.main {
+    width: 50%;
+    padding-left: 5px;
+    box-shadow: 2px 0px 0px 0px rgb(201, 184, 49);
+}
+
+@media(max-width:721px) {
+    .main {
+        display: flex;
+        width: 100%;
+        padding: 0px 0 0 2px;
+        flex-direction: column;
+    }
+}
+
+.Addvanced {
+    padding: 0 0 0 20px;
+    width: 50%;
+}
+
+@media(max-width:721px) {
+    .Addvanced {
+        display: flex;
+        width: 100%;
+        padding: 0px 0 0 2px;
+        flex-direction: column;
+        border-top: gold solid 1px;
+        border-bottom: gold solid 1px;
+    }
+}
+
+.container {
+    width: auto;
+    display: flex;
+    margin-top: 20px;
+    border-bottom: gold solid 1px;
+    border-top: gold solid 1px;
+}
+
+span {
+    color: aqua;
+    font-style: sans-serif;
+}

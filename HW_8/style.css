@@ -1,0 +1,145 @@
+.button {
+    width: 350px;
+    height: 70px;
+    cursor: pointer;
+    color: white;
+    background: #44D3A8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.out {
+    position: relative;
+}
+
+.out::before {
+    content: ' ';
+    display: block;
+    height: 5px;
+    width: 200px;
+    position: absolute;
+    top: 47%;
+    border-top: solid 2px #C4C4C4;
+    background-color: white;
+    right: 1025px;
+    border-bottom: solid 2px #C4C4C4;
+}
+
+.out::after {
+    content: ' ';
+    display: block;
+    height: 5px;
+    width: 200px;
+    position: absolute;
+    top: 47%;
+    border-top: solid 2px #C4C4C4;
+    background-color: white;
+    left: 1025px;
+    border-bottom: solid 2px #C4C4C4;
+}
+
+
+/*================================================2============================================*/
+
+
+.block {
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    background-color: gray;
+    margin: 2px;
+
+}
+
+.btn {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    margin: 50px;
+}
+
+.block:nth-child(n+21) {
+    background-color: blue;
+}
+
+.block:last-child {
+    background-color: red;
+}
+
+/*==============================THIRD========================*/
+
+.blocks {
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    background-color: gray;
+    margin: 2px;
+}
+
+.btns {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    margin: 50px;
+}
+
+.blocks:nth-child(odd) {
+    background-color: red;
+}
+
+.blocks:nth-child(4n+2) {
+    background-color: red;
+}
+
+
+/*========================================THIRD_2==========================*/
+
+
+.blockss {
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    background-color: gray;
+    margin: 2px;
+}
+
+.btnss {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    margin: 50px;
+}
+
+.blockss:nth-child(4n+3) {
+    background-color: red;
+}
+
+/*======================FOUR====================*/
+
+.blocksss {
+    width: 50px;
+    height: 50px;
+    border: solid 2px black;
+    background-color: gray;
+    margin: 2px;
+}
+
+.btnsss {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    margin: 50px;
+}
+
+.blocksss:nth-child(n+21) {
+    background-color: blue;
+}
+
+.blocksss:nth-child(4n+3) {
+    background-color: red;
+}
