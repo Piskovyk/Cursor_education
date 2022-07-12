@@ -48,7 +48,7 @@ input {
 }
 
 .social_posts {
-    width: 67px;
+    width: 80px;
     height: 21px;
     font-family: 'Helvetica Neue';
     font-weight: 700;
@@ -58,7 +58,7 @@ input {
 }
 
 .social_followers {
-    width: 130px;
+    width: 150px;
     height: 21px;
     font-family: 'Helvetica Neue';
     font-weight: 700;
@@ -68,7 +68,7 @@ input {
 }
 
 .social_following {
-    width: 130px;
+    width: 150px;
     height: 21px;
     font-family: 'Helvetica Neue';
     font-weight: 700;
