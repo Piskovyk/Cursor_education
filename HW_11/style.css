@@ -1,0 +1,156 @@
+@font-face {
+    font-family: Helvetica Neue;
+    src: url(./fonts/HelveticaNeueCyr-Thin.ttf);
+}
+
+
+.head {
+    height: 55px;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+input {
+    background: aliceblue;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px
+}
+
+.header_social {
+    width: 190px;
+    height: 23px;
+}
+
+.socIcon:hover {
+    cursor: pointer;
+}
+
+.infoPerson_name {
+    height: 40px;
+}
+
+.firstName {
+    width: 68px;
+    height: 33px;
+    font-family: 'Helvetica Neue';
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 32px;
+    color: #262626;
+    padding: 0;
+}
+
+.btnF {
+    width: 97px;
+}
+
+.social_posts {
+    padding: 0;
+}
+
+.social_posts {
+    width: 67px;
+    height: 21px;
+    font-family: 'Helvetica Neue';
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: #262626;
+}
+
+.social_followers {
+    width: 130px;
+    height: 21px;
+    font-family: 'Helvetica Neue';
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: #262626;
+}
+
+.social_following {
+    width: 130px;
+    height: 21px;
+    font-family: 'Helvetica Neue';
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: #262626;
+}
+
+.person_fullName {
+    width: 47px;
+    font-size: 17px;
+    line-height: 21px;
+    color: #262626;
+}
+
+.dots {
+    font-size: 2rem;
+}
+
+.person_Info {
+    width: 531px;
+    font-size: 17px;
+    line-height: 25px;
+    color: #262626;
+}
+
+.person_Link {
+    width: 121px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+
+    color: #133768;
+}
+
+
+/*==============GALERY==================*/
+
+.imagesRow {
+    gap: 2rem;
+}
+
+.imagesRow_colOne {
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.imagesRow_colTwo {
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid;
+    padding: 0;
+
+}
+
+.imagesRow_colThree {
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid;
+    padding: 0;
+
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    transition: all 0.5s ease 0s;
+
+}
+
+.images:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+.gallery {
+    padding: 5rem 0rem 0rem 8rem;
+    border-top: 1px solid black;
+    margin-top: 5rem;
+}

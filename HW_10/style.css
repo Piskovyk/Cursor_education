@@ -164,5 +164,5 @@ body {
 .toggle-icon:hover .bar:nth-of-type(3) {
     border-right-color: #ddf1da;
     box-shadow: 0.4em 0 0.6em 0.2em rgb(83, 228, 68);
-    transform: translateY(-8px) translateX(0px) rotate(-50deg);
+    transform: translateY(-3px) translateX(0px) rotate(-45deg);
 }
