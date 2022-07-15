@@ -70,6 +70,7 @@
 }
 
 @media(max-width:362px) {
+
     .IntroduceBg {
         display: none;
     }
@@ -240,6 +241,7 @@
 @media(max-width:362px) {
     .ligthBlocks {
         flex-direction: column;
+        overflow: hidden;
     }
 
     .ligthBlocksOne {
