@@ -74,12 +74,17 @@ section {
     background: #FFFFFF;
 }
 
-@media (min-width:362px) and (max-width:719px) {
+@media (min-width:358px) and (max-width:719px) {
     .container {
         position: relative;
         width: 360px;
         height: 5770px;
         background: #FFFFFF;
+        overflow: hidden;
+    }
+
+    .blockOne {
+        width: 360px;
     }
 }
 
@@ -90,13 +95,16 @@ section {
         height: 5315px;
         background: #FFFFFF;
     }
+
+    .blockOne {
+        width: 720px;
+    }
 }
 
 .blockOne {
     width: 1440px;
     height: 665px;
     padding-left: 163px;
-
     background: #F4F6F9;
 }
 
@@ -191,6 +199,7 @@ section {
         font-size: 23px;
         line-height: 35px;
         text-align: center;
+        padding-right: 15px;
     }
 }
 
