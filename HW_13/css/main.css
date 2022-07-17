@@ -3,7 +3,9 @@ img {
     height: auto;
 }
 
-html, body, .wrapper {
+html,
+body,
+.wrapper {
     min-height: 100% !important;
     height: 100%;
 }
@@ -203,7 +205,8 @@ button {
     letter-spacing: 0.08em;
 }
 
-.main-screen .left-block, .main-screen .right-block {
+.main-screen .left-block,
+.main-screen .right-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -402,7 +405,8 @@ button {
     width: auto;
 }
 
-.how .left-block, .how .right-block {
+.how .left-block,
+.how .right-block {
     width: calc(50% - 100px);
     position: relative;
     margin-left: 24px;
@@ -414,7 +418,8 @@ button {
     font-family: "HelveticaNeueMedium";
 }
 
-.how .left-block .cost, .how .right-block .cost {
+.how .left-block .cost,
+.how .right-block .cost {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: "HelveticaNeueBold";
@@ -425,7 +430,8 @@ button {
     position: relative;
 }
 
-.reviews .arrow-left, .reviews .arrow-right {
+.reviews .arrow-left,
+.reviews .arrow-right {
     position: absolute;
     top: 50%;
     -webkit-transform: translate(0, -50%);
@@ -472,7 +478,7 @@ button {
     padding-top: 15px;
 }
 
-.reviews .review-author > * {
+.reviews .review-author>* {
     vertical-align: top;
 }
 
@@ -508,7 +514,8 @@ button {
     left: -20px;
 }
 
-.delivery .left-block, .delivery .right-block {
+.delivery .left-block,
+.delivery .right-block {
     float: none;
     width: calc(50% - 50px);
     vertical-align: top;
@@ -552,7 +559,8 @@ button {
     margin-bottom: 60px;
 }
 
-.last-screen .left-block, .last-screen .right-block {
+.last-screen .left-block,
+.last-screen .right-block {
     width: auto;
     max-width: 500px;
     float: none;
@@ -592,4 +600,42 @@ footer {
     margin-top: 100px;
     background-color: #333;
     height: 50px;
+}
+
+.reviews .review-slider {
+    max-width: 100%;
+}
+
+.reviews .review-author {
+    display: flex;
+    margin: 10px 0 auto 0;
+    padding-top: 15px;
+    justify-content: end;
+}
+
+.slick-next {
+    position: absolute;
+    top: 130px;
+    right: -40px;
+    background: url(../img/arrow-right.png) no-repeat;
+    width: 30px;
+    height: 65px;
+}
+
+.slick-prev {
+    position: absolute;
+    top: 130px;
+    left: -40px;
+    background: url(../img/arrow-left.png) no-repeat;
+    width: 30px;
+    height: 65px;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
 }
