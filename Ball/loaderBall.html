@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./loaderBall.css">
+</head>
+
+<body>
+    <svg class="mainSVG" viewBox="0 0 800 600" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet">
+        <defs>
+            <path id="mainPath" fill="none" stroke="#F05555" stroke-width="0" stroke-miterlimit="10"
+                d="M481.5,195.5H302  c-33,0-60.5,26.534-60.5,59.534v0.017c0,33,27.125,59.975,60.125,59.975l179.875,0.041c33,0,60.125,27.433,60.125,60.433h0.125  c0,33-27.25,59.567-60.25,59.567h-180c-33,0-59.875,27.433-59.875,60.433h0.125c0,33,26.75,59.567,59.75,59.567l180.125-0.042 c33,0,59.875,27.025,59.875,60.025v-0.017c0,33-26.5,60.466-59.5,60.466H301.5" />
+        </defs>
+        <!-- <line x1="396" y1="0" x2="396" y2="600" fill="none" stroke="#FFF" opacity="1" stroke-width="3"/> -->
+        <g class="wholeGroup">
+
+
+            <use xlink:href="#mainPath" y="-480" />
+            <use xlink:href="#mainPath" />
+            <use xlink:href="#mainPath" y="480" />
+            <g id="mainPathGroup" fill="none" stroke-miterlimit="10" stroke-width="4" stroke-linecap="round"
+                stroke="#FFF">
+                <path class="mainPath" opacity="0.1"
+                    d="M481.5,195.5H302 c-33,0-60.5,26.534-60.5,59.534v0.017c0,33,27.125,59.975,60.125,59.975l179.875,0.041c33,0,60.125,27.433,60.125,60.433h0.125  c0,33-27.25,59.567-60.25,59.567h-180c-33,0-59.875,27.433-59.875,60.433h0.125c0,33,26.75,59.567,59.75,59.567l180.125-0.042 c33,0,59.875,27.025,59.875,60.025v-0.017c0,33-26.5,60.466-59.5,60.466H301.5" />
+                <path class="mainPath" opacity="0.3"
+                    d="M481.5,195.5H302  c-33,0-60.5,26.534-60.5,59.534v0.017c0,33,27.125,59.975,60.125,59.975l179.875,0.041c33,0,60.125,27.433,60.125,60.433h0.125  c0,33-27.25,59.567-60.25,59.567h-180c-33,0-59.875,27.433-59.875,60.433h0.125c0,33,26.75,59.567,59.75,59.567l180.125-0.042 c33,0,59.875,27.025,59.875,60.025v-0.017c0,33-26.5,60.466-59.5,60.466H301.5" />
+                <path class="mainPath" opacity="0.7"
+                    d="M481.5,195.5H302 c-33,0-60.5,26.534-60.5,59.534v0.017c0,33,27.125,59.975,60.125,59.975l179.875,0.041c33,0,60.125,27.433,60.125,60.433h0.125  c0,33-27.25,59.567-60.25,59.567h-180c-33,0-59.875,27.433-59.875,60.433h0.125c0,33,26.75,59.567,59.75,59.567l180.125-0.042 c33,0,59.875,27.025,59.875,60.025v-0.017c0,33-26.5,60.466-59.5,60.466H301.5" />
+                <path class="mainPath"
+                    d="M481.5,195.5H302  c-33,0-60.5,26.534-60.5,59.534v0.017c0,33,27.125,59.975,60.125,59.975l179.875,0.041c33,0,60.125,27.433,60.125,60.433h0.125  c0,33-27.25,59.567-60.25,59.567h-180c-33,0-59.875,27.433-59.875,60.433h0.125c0,33,26.75,59.567,59.75,59.567l180.125-0.042 c33,0,59.875,27.025,59.875,60.025v-0.017c0,33-26.5,60.466-59.5,60.466H301.5" />
+            </g>
+            <g id="ballGroup" fill="#FFF">
+                <circle class="ball" cx="345" cy="176" r="14" />
+
+                <circle class="ball" cx="400" cy="176" r="14" />
+                <circle class="ball" cx="455" cy="176" r="14" />
+            </g>
+        </g>
+    </svg>
+
+    <script>
+        var xmlns = "http://www.w3.org/2000/svg",
+            xlinkns = "http://www.w3.org/1999/xlink",
+            select = function (s) {
+                return document.querySelector(s);
+            },
+            selectAll = function (s) {
+                return document.querySelectorAll(s);
+            },
+            mainSVG = select('.mainSVG'),
+            wholeGroup = select('.wholeGroup'),
+            ballGroup = select('#ballGroup'),
+            mainPath = nodeListToArray(selectAll('.mainPath')).reverse(),
+            allBalls = selectAll('.ball'),
+            ball = selectAll('.ball'),//nodeListToArray(allBalls).reverse(),
+            offset = 0.04
+
+        TweenMax.set(ball, {
+            transformOrigin: '50% 100%'
+        })
+
+        TweenMax.set('svg', {
+            visibility: 'visible'
+        })
+
+        TweenMax.set(mainPath, {
+            drawSVG: '1% 9%'
+        })
+
+        var tl = new TimelineMax({
+            delay: 1, repeat: 0, repeatDelay: 1, onComplete: function () {
+                tl.play(0);
+            }
+        });
+        tl.staggerTo(mainPath, 1, {
+            drawSVG: '24% 32%',
+            ease: Expo.easeInOut
+        }, offset)
+            .staggerTo(nodeListToArray(selectAll('.ball')).reverse(), 1, {
+                y: '+=120',
+                ease: Bounce.easeOut
+            }, offset, '-=0.65')
+            .staggerTo(nodeListToArray(selectAll('.ball')).reverse(), 0.1, {
+                scaleX: 1.2,
+                scaleY: 0.8,
+                ease: Power2.easeIn
+
+            }, offset, '-=0.75')
+            .staggerTo(nodeListToArray(selectAll('.ball')).reverse(), 0.1, {
+                scaleX: 1,
+                scaleY: 1
+
+            }, offset, '-=0.6')
+
+            .staggerTo(mainPath, 1, {
+                drawSVG: '45.5% 53.5%',
+                ease: Expo.easeInOut
+            }, offset)
+            .staggerTo('.ball', 1, {
+                y: '+=120',
+                ease: Bounce.easeOut
+            }, offset, '-=0.65')
+            .staggerTo('.ball', 0.1, {
+                scaleX: 1.2,
+                scaleY: 0.8,
+                ease: Power2.easeIn
+
+            }, offset, '-=0.75')
+            .staggerTo('.ball', 0.1, {
+                scaleX: 1,
+                scaleY: 1
+
+            }, offset, '-=0.6')
+
+            .staggerTo(mainPath, 1, {
+                drawSVG: '68.5% 76.5%',
+                ease: Expo.easeInOut
+            }, offset)
+            .staggerTo(nodeListToArray(selectAll('.ball')).reverse(), 1, {
+                y: '+=120',
+                ease: Bounce.easeOut
+            }, offset, '-=0.65')
+
+            .staggerTo(nodeListToArray(selectAll('.ball')).reverse(), 0.1, {
+                scaleX: 1.2,
+                scaleY: 0.8,
+                ease: Power2.easeIn
+
+            }, offset, '-=0.75')
+            .staggerTo(nodeListToArray(selectAll('.ball')).reverse(), 0.1, {
+                scaleX: 1,
+                scaleY: 1
+
+            }, offset, '-=0.6')
+            .staggerTo(mainPath, 1, {
+                drawSVG: '90% 98%',
+                ease: Expo.easeInOut
+            }, offset)
+            .staggerTo('.ball', 1, {
+                y: '+=120',
+                ease: Bounce.easeOut
+            }, offset, '-=0.65')
+            .staggerTo('.ball', 0.1, {
+                scaleX: 1.2,
+                scaleY: 0.8,
+                ease: Power2.easeIn
+
+            }, offset, '-=0.75')
+            .staggerTo('.ball', 0.1, {
+                scaleX: 1,
+                scaleY: 1
+
+            }, offset, '-=0.6')
+
+            .to(wholeGroup, tl.duration(), {
+                y: '-=480',
+                ease: Linear.easeNone
+            }, '-=' + tl.duration())
+
+        //ScrubGSAPTimeline(tl);
+
+        function nodeListToArray(list) {
+
+            return Array.prototype.slice.call(list);
+        }
+
+
+        /* TweenMax.set(mainSVG, {
+          transformOrigin:'50% 50%',
+          scaleY:-1,
+          y:-600
+        }) */
+
+
+    </script>
+</body>
+
+</html>
