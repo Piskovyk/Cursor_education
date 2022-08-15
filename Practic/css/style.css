@@ -1,0 +1,224 @@
+/*==============*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/*==============*/
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../fonts/Gilroy.ttf);
+}
+
+@font-face {
+    font-family: aremat;
+    src: url(../fonts/aremat\ font.ttf);
+}
+
+html {
+    background: white;
+}
+
+.dahl {
+    width: 1440px;
+    height: 860px;
+    background: radial-gradient(78.72% 78.72% at 50% 44.29%, rgba(87, 42, 9, 0.42) 0%, rgba(0, 0, 0, 0) 100%);
+    /*background-image: url(../img/geom.png), url(../img/girl.png);*/
+}
+
+.dahl_girl {
+    position: relative;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(72, 42, 7, 0.22), rgba(72, 42, 7, 0.22)), rgba(72, 42, 7, 0.39) url(../img/girl.png);
+    height: 100%;
+}
+
+.dahl_geom {
+    background: url(../img/geom.png) no-repeat;
+    position: absolute;
+    width: 70rem;
+    height: 47rem;
+    top: 0;
+    left: 2rem;
+}
+
+.dahl_menu {
+    position: fixed;
+    top: 4rem;
+    display: flex;
+    width: 66rem;
+    height: 4rem;
+    right: 16rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 9rem;
+    display: none;
+}
+
+.dahl_menu__left {
+    width: 23rem;
+}
+
+.dahl_menu__logo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.logoDahl {}
+
+.dahl_menu__scincore {}
+
+.dahl_menu__right {
+    width: 15rem;
+}
+
+.dahl_menu__icons {
+    width: 7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    letter-spacing: 0.03em;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: Gilroy;
+}
+
+
+
+
+.dahl_star {
+    display: flex;
+    align-items: center;
+}
+
+.dahl_content {
+    position: absolute;
+    top: 15rem;
+    left: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50rem;
+}
+
+
+.dahl_star__txt {
+    font-family: 'aremat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100.55%;
+    margin-left: 5px;
+    /* identical to box height, or 16px */
+
+    color: #FFFFFF;
+}
+
+h2 {
+    font-family: 'aremat';
+    font-weight: 900;
+    font-size: 37px;
+    line-height: 85.45%;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.dahl_because {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 37px;
+    line-height: 85.45%;
+
+    color: #FFD7BD;
+}
+
+.dahl_deserve {}
+
+.dahl_txt {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    line-height: 23px;
+    color: #FFFFFF;
+    width: 50rem;
+    text-align: center;
+}
+
+.dahl_btn {}
+
+.white {
+    font-family: 'aremat';
+    width: 244px;
+    height: 68px;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 18px;
+    color: #B68050;
+    cursor: pointer;
+}
+
+.transp {
+    font-family: 'aremat';
+    width: 244px;
+    height: 68px;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 18px;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+}
+
+.transp:hover {
+    background-color: #665950;
+    transition: all 0.3s ease;
+}
+
+.dahl_deliver {
+    width: 23rem;
+    display: flex;
+}
+
+.dahl_deliver__car {
+    align-items: center;
+    display: flex;
+}
+
+.dahl_star__txtCar {
+    font-family: 'aremat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100.55%;
+    color: rgba(255, 255, 255, 0.79);
+    margin-left: 10px;
+}
+
+.dahl_star__txtdlivr {
+    font-family: 'aremat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100.55%;
+    color: rgba(255, 255, 255, 0.79);
+    margin-left: 10px;
+}

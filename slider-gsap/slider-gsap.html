@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider-gsap</title>
+    <link rel="stylesheet" href="./slider-gsap.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="image image-1">
+            <img src="https://images.unsplash.com/photo-1559584039-6a7f832b5767?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
+                alt="image 1" />
+            <h2 class="text">Image 1</h2>
+        </div>
+
+        <div class="image image-2">
+            <img src="https://source.unsplash.com/vRkiYoCeN2g/400x267" alt="image 2" />
+            <h2 class="text">Image 2</h2>
+        </div>
+
+        <div class="image image-3">
+            <img src="https://source.unsplash.com/WDBUAblF48U/400x267" alt="image 3" />
+            <h2 class="text">Image 3</h2>
+        </div>
+
+        <div class="image image-4">
+            <img src="https://source.unsplash.com/jumNGn7kBl0/400x267" alt="image 4" />
+            <h2 class="text">Image 4</h2>
+        </div>
+
+        <div class="image image-5">
+            <img src="https://source.unsplash.com/ocku3zjNM7k/400x267" alt="image 5" />
+            <h2 class="text">Image 5</h2>
+        </div>
+    </div>
+
+    <button role="button" class="button button-next" onclick="nextAnimation(event)">></button>
+
+    <script>
+        let images = document.querySelectorAll('.image');
+        const root = document.documentElement;
+        const elements = ['.image-1', '.image-2', '.image-3', '.image-4', '.image-5']
+        const totalImages = images.length;
+
+        let currentImage = 1;
+        let nextImage = currentImage + 1;
+        let upcomingImage = nextImage + 1;
+
+        function filterActiveImages(image1, image2) {
+            const filteredResult = elements.filter((element) => element !== image1 && element !== image2)
+            return filteredResult;
+        }
+
+        function slideImage(currentImage, nextImage, upcomingImage) {
+            let tl = gsap.timeline({ defaults: { duration: 0.8, ease: Power1.easeInOut } });
+            tl.to(`.image-${currentImage}`, { rotation: -10, xPercent: -100 })
+                .to(`.image-${currentImage}`, { rotation: 0, xPercent: 0 })
+                .to(`.image-${nextImage}`, { zIndex: 2 }, "-=1.6")
+                .to(`.image-${currentImage}`, { zIndex: -1 }, "-=1.6")
+                .to(`.image-${upcomingImage}`, { zIndex: 1 }, "-=1.6")
+                .to(filterActiveImages(`.image-${nextImage}`, `.image-${currentImage}`), { zIndex: 0 }, "-=2.4")
+            tl.timeScale(2);
+            return tl;
+        }
+
+        function nextAnimation() {
+            slideImage(currentImage, nextImage, upcomingImage);
+
+            currentImage = nextImage;
+            nextImage = currentImage - 1;
+
+            if (currentImage === 1) {
+                nextImage = totalImages
+            }
+
+            if (nextImage === 1) {
+                upcomingImage = totalImages
+            } else {
+                upcomingImage = nextImage - 1;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

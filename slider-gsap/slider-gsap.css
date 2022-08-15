@@ -1,0 +1,62 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    height: 267px;
+    margin: 16px;
+    box-shadow: 0 0 40px 30px rgba(0, 0, 0, .2);
+}
+
+img {
+    max-width: 100%;
+}
+
+.image {
+    position: absolute;
+    transform-origin: 100% 100%;
+}
+
+.text {
+    position: absolute;
+    top: 10%;
+    right: -15%;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    font-family: 'Sriracha', cursive;
+    letter-spacing: 1px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.button {
+    padding: 8px 10px;
+    font-size: 32px;
+    background: transparent;
+    outline: none;
+    border: 3px solid black;
+    cursor: pointer;
+    color: black;
+}
+
+.image {
+    z-index: 0;
+}
+
+.image-1 {
+    z-index: 2;
+}
+
+.image-2 {
+    z-index: 1;
+}
+
+.image-5 {
+    z-index: -1;
+}

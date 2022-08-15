@@ -1,0 +1,159 @@
+/*NULL*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    padding: 30px;
+    min-height: 100%;
+}
+
+/*==========================================================*/
+
+/*Якщо флекс
+.block{
+    display: flex;
+}
+.block-side{
+    flex: 0 0 300px;
+    background-color: #77608d;
+}
+.block__body{
+    padding: 0 0 0 30px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+*/
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 30px 0;
+}
+
+
+.swiper-container {}
+
+.imagee-slider__wrapper {}
+
+.swiper-wrapper {}
+
+.imagee-slider__slide {}
+
+.swiper-slide {}
+
+.image-slider__image {
+    text-align: center;
+}
+
+.image-slider__image img {
+    max-width: 100%;
+}
+
+
+/*arrows*/
+.image-slider .swiper-button-next::after,
+.image-slider .swiper-button-prev::after {
+    color: #fff;
+    font-style: 80px;
+}
+
+/*Буліти*/
+.image-slider .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-style: 14px;
+    background-color: #fff;
+}
+
+/*Пагінація*/
+.image-slider .swiper-pagination {
+    bottom: 0;
+}
+
+/*Фракція*/
+.image-slider .swiper-pagination-fraction {
+    font-size: 20px;
+    color: #fff;
+}
+
+/*Прогресбар*/
+.image-slider .swiper-pagination-progressbar-fill {
+    background-color: brown;
+}
+
+/*Скрол*/
+.image-slider .swiper-scrollbar-drag {
+    cursor: pointer;
+    background-color: brown;
+}
+
+/*Автоширина*/
+.image-slider .swiper-slide {
+    width: auto;
+}
+
+/*К-сть рядів
+.image-slider {
+    padding: 30px 0 70px 0;
+    height: 700px;
+}
+
+.image-slider .swipper-slide {
+    height: calc(100% - 30px) / 2;
+    overflow: hidden;
+}
+*/
+
+/*Висота слайдера
+.image-slider {
+    padding: 0px 0px 0px 0px;
+    height: 600px;
+}*/
+
+/*Куб
+.image-slider {
+    width: 900px;
+    margin: 0 auto;
+}
+*/
